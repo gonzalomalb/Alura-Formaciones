@@ -1,0 +1,36 @@
+<meta charset(UTF-8)>
+
+<h1> PROGRAMA CALCULADOR DE PUNTOS </h1>
+<hr>
+<br>
+<br>
+
+<script>
+
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(texto){
+        document.write("<big>" + texto + "</big>");
+        saltarLinea()
+    }
+
+    var victorias = parseInt(prompt("Indique la cantidad de victorias"));
+    var empates = parseInt(prompt("Indique la cantidad de empates"));
+
+    //var nombre = parseInt(prompt("Escriba su nombre")); Esta linea generaría un error al intentar convertir un string con texto(como una palabra) a un número
+
+    var derrotas = parseInt(prompt("Indique la cantidad de derrotas"));
+    var puntosTotales = ((victorias * 3) + empates) - (derrotas * 2);
+
+    imprimir("El total de puntos es: " + puntosTotales);
+
+</script> 
+

@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+
+<h1>PROMEDIO DE EDADES DE UNA FAMILIA</h1>
+<hr>
+<br>
+
+
+<script>
+
+    function br(){    
+        document.write("<br>"); 
+        document.write("<br>");
+        document.write("<br>");  
+    }  
+
+    function imprimir(frase){
+        document.write("<big>" + frase + "</big>");
+        br();
+    }
+
+
+
+    var sumaFam = 0;
+    var numeroFam = parseInt(prompt("Cuantos integrantes tiene su familia?:"))
+    var totalFam = numeroFam 
+
+    for(numeroFam; numeroFam > 0; numeroFam--){
+        var nombres = prompt("Por favor indique el nombre del siguiente integrante:");
+        var edades = parseInt(prompt("Indique su edad:"));
+        sumaFam = sumaFam + edades;
+        imprimir(nombres + " " + edades + " años.");
+    }
+
+    var promedio = sumaFam/totalFam
+    imprimir("El promedio de edad de su familia es: " + promedio + " años.");
+
+
+
+</script>

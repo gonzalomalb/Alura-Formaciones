@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+
+<h1>TABLA DE MULTIPLICACIÓN</h1>
+<hr>
+<br>
+
+
+<script>
+
+    function br(){    
+        document.write("<br>"); 
+        document.write("<br>");
+        document.write("<br>");  
+    }  
+
+    function imprimir(frase){
+        document.write("<big>" + frase + "</big>");
+        br();
+    }
+
+
+    
+    var num = parseInt(prompt("Indique el número que desea averiguar su tabla:"));
+    
+    imprimir("<big>" + "Multiplicando con el ciclo while." + "</big>");
+
+    var multiplicador = 0
+    while(multiplicador <= 10){
+        imprimir(multiplicador * num);
+        multiplicador++
+    }
+
+
+    imprimir("<big>" + "Multiplicando con el ciclo for." + "</big>");
+
+    for(var multiplicador = 0; multiplicador <= 10; multiplicador++){
+        imprimir(multiplicador * num);
+    }
+    imprimir("Fin");
+    
+</script>

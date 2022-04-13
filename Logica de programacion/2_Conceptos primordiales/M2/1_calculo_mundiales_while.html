@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+
+<h1>AÑOS DE LOS MUNDIALES DE LA FIFA</h1>
+<hr>
+<br>
+
+
+<script>
+
+    function br(){    
+        document.write("<br>"); 
+        document.write("<br>");
+        document.write("<br>");  
+    }  
+
+    function print(frase){
+        document.write("<big>" + frase + "</big>");
+        br();
+    }
+
+
+    var anhoMundial = 1930;
+    var anhoDeseado = parseInt(prompt("Inique hasta que año desea saber cuando se jugaron y se van a jugar mundiales:"));
+
+    while(anhoMundial <= anhoDeseado){
+        print(anhoMundial);
+        anhoMundial += 4;
+    }
+    print("Fin");
+    
+</script>

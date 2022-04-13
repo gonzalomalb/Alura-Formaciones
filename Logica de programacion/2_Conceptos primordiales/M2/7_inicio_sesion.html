@@ -1,0 +1,51 @@
+<meta charset = "UTF-8">
+
+
+<h1>ADIVINA EL NÚMERO</h1>
+<hr>
+<br>
+
+
+<script>
+
+    function br(){    
+        document.write("<br>"); 
+        document.write("<br>");
+        document.write("<br>");  
+    }  
+
+    function imprimir(frase){
+        document.write("<big>" + frase + "</big>");
+        br();
+    }
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+    var intentos = 3
+
+    while(true){
+
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+    
+        if(inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada){
+            alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+            imprimir("Conectado");
+            break;
+        } 
+
+        else{
+            if(intentos == 0){
+                imprimir("Intentos agotados, se cerrara el programa.")
+                break;    
+            }
+
+            else{
+                alert("inicio de sesión inválido. Favor intente de nuevo(quedan " + intentos + " intentos");
+                intentos = intentos - 1;
+                continue;
+            }
+        }
+    }
+
+
+</script>

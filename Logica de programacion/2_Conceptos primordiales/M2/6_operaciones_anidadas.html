@@ -1,0 +1,35 @@
+<meta charset = "UTF-8">
+
+
+<h1>ADIVINA EL NÚMERO</h1>
+<hr>
+<br>
+
+
+<script>
+
+    function br(){    
+        document.write("<br>"); 
+        document.write("<br>");
+        document.write("<br>");  
+    }  
+
+    function imprimir(frase){
+        document.write("<big>" + frase + "</big>");
+        br();
+    }
+
+    for(linea = 1; linea <= 3; linea++){
+        for(columna = 1; columna <= 10; columna++){
+            document.write("+");
+        }
+
+        document.write("<br>");
+
+    }
+
+    document.write("<br>");
+    document.write("<br>");
+    imprimir("Fin");
+
+</script>

@@ -1,0 +1,29 @@
+<meta charset = "UTF-8">
+
+
+<h1>ADIVINA EL NÚMERO</h1>
+<hr>
+<br>
+
+<input/>
+<button>Verificar si acertó con el secreto</button>
+
+<script>
+    var secreto = 5;
+    var input = document.querySelector("Input");
+
+    function verificar(){
+
+        if(parseInt(input.value) == secreto){
+            alert("Usted acertó");
+        }
+        
+        else{
+            alert("Usted erró");
+        }
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+
+</script>

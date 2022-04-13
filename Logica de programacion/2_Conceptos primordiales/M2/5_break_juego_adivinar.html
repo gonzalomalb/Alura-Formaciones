@@ -32,24 +32,28 @@
 
 
     while(intentos >= 1){
-        
+
         var numUser = parseInt(prompt("Adivina un número del 1 al " + rangoUser + ".Tienes " + intentos + " intentos"));
 
         if(numUser == numCorrecto){
-            imprimir("Acertó ! ! !");
-            imprimir("El numero era " + numCorrecto);  
+            alert("Acertó ! ! !");
+            alert("El numero era " + numCorrecto);  
             break;
         } 
-
         else{          
             if(intentos == 1){
-                imprimir("Perdió, el numero era: " + numCorrecto)
+                alert("Perdió, el numero era: " + numCorrecto)
                 break;
             }
-
             else{
                 intentos = intentos - 1;
-                continue 
+                if(numUser > numCorrecto){
+                    alert("El número es mas chico");
+                }
+                else{
+                    alert("El número es mas grande");
+                }
+                continue    
             }   
         }           
     }

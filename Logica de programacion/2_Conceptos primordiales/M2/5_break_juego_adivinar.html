@@ -1,0 +1,58 @@
+<meta charset = "UTF-8">
+
+
+<h1>ADIVINA EL NÚMERO</h1>
+<hr>
+<br>
+
+
+<script>
+
+    function br(){    
+        document.write("<br>"); 
+        document.write("<br>");
+        document.write("<br>");  
+    }  
+
+    function imprimir(frase){
+        document.write("<big>" + frase + "</big>");
+        br();
+    }
+
+
+
+    function sort(n){
+        var x = Math.round(Math.random() * n)
+        return(x)
+    }
+
+    var intentos = 3; 
+    var rangoUser = parseInt(prompt("Tienes 3 intentos, ingrese el rango de números que desea jugar"));
+    var numCorrecto = sort(rangoUser);
+
+
+    while(intentos >= 1){
+        
+        var numUser = parseInt(prompt("Adivina un número del 1 al " + rangoUser + ".Tienes " + intentos + " intentos"));
+
+        if(numUser == numCorrecto){
+            imprimir("Acertó ! ! !");
+            imprimir("El numero era " + numCorrecto);  
+            break;
+        } 
+
+        else{          
+            if(intentos == 1){
+                imprimir("Perdió, el numero era: " + numCorrecto)
+                break;
+            }
+
+            else{
+                intentos = intentos - 1;
+                continue 
+            }   
+        }           
+    }
+
+
+</script>

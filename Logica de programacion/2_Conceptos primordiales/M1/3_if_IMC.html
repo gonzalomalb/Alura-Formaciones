@@ -1,4 +1,4 @@
-<meta charset="UTF-8">
+<meta charset = "UTF-8">
 
 
 <h1>PROGRAMA CALCULO IMC</h1>
@@ -14,7 +14,7 @@
         document.write("<br>");  
     }  
 
-    function print(frase){
+    function imprimir(frase){
         document.write("<big>" + frase + "</big>");
         br();
     }
@@ -36,44 +36,44 @@
 
 
 
-    print(nombre + " su índice de masa corporal: " + imc);
+    imprimir(nombre + " su índice de masa corporal: " + imc);
 
     if ( imc < 18){
-        print("Por debajo de la linea saludable");
+        imprimir("Por debajo de la linea saludable");
     } 
 
     if (imc >= 18.50){
         if (imc < 25){
-            print("Peso saludable");
+            imprimir("Peso saludable");
         }
     }
 
     if (imc  >= 25){
         if (imc < 30){
-            print("Sobrepeso");
+            imprimir("Sobrepeso");
         }
     }
 
     if (imc >= 25){
         if (imc < 30){
-            print("Obesidad");
+            imprimir("Obesidad");
         }
     }
 
     if (imc >= 25){
         if (imc < 30){
-            print("Obesidad");
+            imprimir("Obesidad");
         }                
     }
 
     if (imc >= 30){
         if(imc < 110){
-            print("Obesidad Morbida");                
+            imprimir("Obesidad Morbida");                
         }
     }
 
     if (imc >= 110){
-        print("Usted no debería de existir");
+        imprimir("Usted no debería de existir");
     }
     
 </script>

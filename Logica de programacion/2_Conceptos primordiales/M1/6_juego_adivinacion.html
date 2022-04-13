@@ -1,4 +1,4 @@
-<meta charset="UTF-8">
+<meta charset = "UTF-8">
 
 
 <h1>ADIVINA EL NÚMERO</h1>
@@ -14,7 +14,7 @@
         document.write("<br>");  
     }  
 
-    function print(frase){
+    function imprimir(frase){
         document.write("<big>" + frase + "</big>");
         br();
     }
@@ -29,15 +29,15 @@
     var numUsuario = parseInt(prompt("Adivina un número del 1 al 10:"));
 
     if(numUsuario == numCorrecto){
-        print("Acertó ! ! !");
-        print("El numero era " + numCorrecto);    
+        imprimir("Acertó ! ! !");
+        imprimir("El numero era " + numCorrecto);    
     }
     else{
         if(numUsuario > numCorrecto){
-            print("El número era menor:     " + numCorrecto);
+            imprimir("El número era menor:     " + numCorrecto);
         }
         else{
-            print("El número era mayor:     " + numCorrecto);
+            imprimir("El número era mayor:     " + numCorrecto);
         }
         
     }

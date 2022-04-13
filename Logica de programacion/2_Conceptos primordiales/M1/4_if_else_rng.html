@@ -1,4 +1,4 @@
-<meta charset="UTF-8">
+<meta charset = "UTF-8">
 
 
 <h1>PROGRAMA ADIVINA EL NÚMERO TEST</h1>
@@ -14,7 +14,7 @@
         document.write("<br>");  
     }  
 
-    function print(frase){
+    function imprimir(frase){
         document.write("<big>" + frase + "</big>");
         br();
     }
@@ -23,11 +23,11 @@
     var numeroUsuario = parseInt(prompt("Adivina el numero entre 1-10:"));
 
     if (numeroUsuario == numeroCorrecto){
-        print("Usted acertó ! ! !");
-        print("El numero correcto era: " + numeroCorrecto);
+        imprimir("Usted acertó ! ! !");
+        imprimir("El numero correcto era: " + numeroCorrecto);
     }
         
     else{
-        print("El número era " + numeroCorrecto);
+        imprimir("El número era " + numeroCorrecto);
     }
 </script>

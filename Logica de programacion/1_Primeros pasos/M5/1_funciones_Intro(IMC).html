@@ -18,22 +18,15 @@
         saltarLinea();
     }
 
+    //Esta funcion esta limitada por la cantidad y objetividad de sus parametros. 
     function calcularImc(peso, altura, nombre){
         imc = peso / (altura * altura);
         imprimir("El indice de masa corporal calculado de " + nombre + ": " + imc);
     }
 
-    pesoChris = 71
-    alturaChris = 1.72
-    imcChris = pesoChris / (alturaChris * alturaChris)
-    imprimir("El Imc de Christian es de: " + imcChris);
-
-    // pesoFelipe = 75
-    // alturaFelipe = 1.73
-    // imcFelipe = calcularImc(pesoFelipe, alturaFelipe)
-    // imprimir("El Imc de Felipe es de: " + imcFelipe);
-
-    // En 1 línea de código podemos resumir el cálculo anterior utilizando la función calcularImc()
-    calcularImc(75, 1.73, "Felipe");
+    // pesoChris = 71
+    // alturaChris = 1.72
+    // imcChris = pesoChris / (alturaChris * alturaChris)
+    calcularImc(71, 1.72, "Christian");
 
 </script>

@@ -1,31 +1,79 @@
 <meta charset="UTF-8">
 
+
 <h1>PROGRAMA CALCULO IMC</h1>
+<hr>
+<br>
+
 
 <script>
 
-    function saltarLinea() {
-        document.write("<br>");    
-        document.write("<br>");    
+    function br(){    
+        document.write("<br>"); 
         document.write("<br>");
-        document.write("<hr>"); 
-        document.write("<br>");
-        document.write("<br>");     
+        document.write("<br>");  
     }  
 
-    function imprimir(frase) {
+    function print(frase){
         document.write("<big>" + frase + "</big>");
-        saltarLinea();
+        br();
     }
     
-    function calcularImc(peso, altura){
-        return (peso / (altura * altura))
+
+
+    function calculoImc (peso, altura){
+        return (peso / (altura * altura));
     }
 
+
+
     nombre = prompt("Ingrese su nombre:")
-    pesoP = prompt(nombre + ", ingrese su peso:")
-    alturaP = prompt(nombre + ", ingrese su altura:")
+    pesoPop = prompt("ingrese su peso:");
+    alturaPop = prompt("ingrese su altura:");
 
-    imprimir(nombre + " su índice de masa corporal es: " + calcularImc(pesoP, alturaP))
+    imc = calculoImc (pesoPop, alturaPop); 
 
-</script>   
+
+
+
+    print(nombre + " su índice de masa corporal: " + imc);
+
+    if ( imc < 18){
+        print("Por debajo de la linea saludable");
+    } 
+
+    if (imc >= 18.50){
+        if (imc < 25){
+            print("Peso saludable");
+        }
+    }
+
+    if (imc  >= 25){
+        if (imc < 30){
+            print("Sobrepeso");
+        }
+    }
+
+    if (imc >= 25){
+        if (imc < 30){
+            print("Obesidad");
+        }
+    }
+
+    if (imc >= 25){
+        if (imc < 30){
+            print("Obesidad");
+        }                
+    }
+
+    if (imc >= 30){
+        if(imc < 110){
+            print("Obesidad Morbida");                
+        }
+    }
+
+    if (imc >= 110){
+        print("Usted no debería de existir");
+    }
+    
+</script>

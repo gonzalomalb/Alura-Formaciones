@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+
+<h1>PROGRAMA DETECTOR DE CONDUCTORES CUALIFICADOS</h1>
+<hr>
+<br>
+
+
+<script>
+
+    function br(){    
+        document.write("<br>"); 
+        document.write("<br>");
+        document.write("<br>");  
+    }  
+
+    function print(frase){
+        document.write("<big>" + frase + "</big>");
+        br();
+    }
+
+    tieneEdad = prompt("¿Indique su edad?");
+    tieneLicencia = prompt("¿Posee licencia de conducir SI o NO?");
+    
+    if(tieneEdad >= 18 && (tieneLicencia == "si" || "SI" || "Si"|| "sI")){
+        print("Conductor Habilitado");
+    }
+    
+    else{
+        print("Conductor No Habilitado");
+    }
+</script>

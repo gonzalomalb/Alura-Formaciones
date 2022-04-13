@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+
+<h1>PROGRAMA CALCULO IMC</h1>
+<hr>
+<br>
+
+
+<script>
+
+    function br(){    
+        document.write("<br>"); 
+        document.write("<br>");
+        document.write("<br>");  
+    }  
+
+    function print(frase){
+        document.write("<big>" + frase + "</big>");
+        br();
+    }
+
+    var numeroCorrecto = Math.round(Math.random() * 10);
+    var numeroUsuario = parseInt(prompt("Adivina el numero entre 1-10:"));
+
+    if (numeroUsuario == numeroCorrecto){
+        print("Usted acertó ! ! !");
+        print("El numero correcto era: " + numeroCorrecto);
+    }
+        
+    else{
+        print("El número era " + numeroCorrecto);
+    }
+</script>

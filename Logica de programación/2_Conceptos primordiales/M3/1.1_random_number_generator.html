@@ -5,9 +5,9 @@
 <hr>
 <br>
 
-<button>Generar número</button>
 Indique rango numérico: 
 <input/>
+<button>Generar número</button>
 
 
 <script>
@@ -21,6 +21,8 @@ Indique rango numérico:
         var rn = parseInt(input.value);
         var numero = Math.round(Math.random() * rn);
         alert(numero);
+        input.value = "";
+        input.focus();
 
     }
 

@@ -19,25 +19,33 @@ Inserte un número:
 
     function loteria(cantidad){
         generados = [];
-        contador = 1;
-        while(contador < cantidad){
-            num = Math.round(Math.random() * 7);
+        contador = 1
+        while(contador <= cantidad){
+            num = Math.round(Math.random() * 100);
             console.log(num);
+            encontrado = false;
             if(num != 0){
-                for(contador; contador < cantidad; contador++){
-                    if
+                for(var posicion = 0; posicion < generados.length; posicion++){
+                    if(num == generados[posicion]){
+                        encontrado = true;
+                        break;
+                    }
                 }
-                generados.push(num);
+                if(encontrado == false){
+                    generados.push(num);
+                    contador++;
+                    
+                }
             }
         }
-        return generados
-    }
+        return generados;
+    }    
 
     function verificar(){
         var encontrado = false;
         for(posicion = 0; posicion < sorteados.length; posicion++){
             if(parseInt(input.value) == sorteados[posicion]){
-                alert("GANADOR! " + "Los números eran: " + sorteados);
+                alert("GANADOR!!!" + "Los números ganadores eran: " + sorteados);
                 encontrado = true;
                 input.value = "";
                 input.focus();
@@ -45,7 +53,7 @@ Inserte un número:
             }
         }
         if(encontrado == false){
-            alert("Fallo. " + "Los números eran: " + sorteados);
+            alert("Fallo. " + "Los números ganadores eran: " + sorteados);
             input.value = "";
             input.focus();    
         }
@@ -53,11 +61,11 @@ Inserte un número:
 
     sorteados = loteria(7);
     console.log(sorteados);
-
     var input = document.querySelector("input");
     input.focus();
     var button = document.querySelector("button");
     button.onclick = verificar;
+    
 
 
 

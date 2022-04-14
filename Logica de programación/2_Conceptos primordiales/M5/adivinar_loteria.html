@@ -1,0 +1,64 @@
+<meta charset = "UTF-8">
+
+
+<h1>ADIVINE LA LOTERÍA</h1>
+<hr>
+<br>
+<br>
+<br>
+<br>
+
+Inserte un número:
+<input/>
+<button>Suerte</button>
+
+
+
+
+<script>
+
+    function loteria(cantidad){
+        generados = [];
+        contador = 1;
+        while(contador < cantidad){
+            num = Math.round(Math.random() * 7);
+            console.log(num);
+            if(num != 0){
+                for(contador; contador < cantidad; contador++){
+                    if
+                }
+                generados.push(num);
+            }
+        }
+        return generados
+    }
+
+    function verificar(){
+        var encontrado = false;
+        for(posicion = 0; posicion < sorteados.length; posicion++){
+            if(parseInt(input.value) == sorteados[posicion]){
+                alert("GANADOR! " + "Los números eran: " + sorteados);
+                encontrado = true;
+                input.value = "";
+                input.focus();
+                break;
+            }
+        }
+        if(encontrado == false){
+            alert("Fallo. " + "Los números eran: " + sorteados);
+            input.value = "";
+            input.focus();    
+        }
+    }
+
+    sorteados = loteria(7);
+    console.log(sorteados);
+
+    var input = document.querySelector("input");
+    input.focus();
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+
+
+
+</script>

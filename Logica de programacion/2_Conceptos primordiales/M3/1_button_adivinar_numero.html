@@ -9,6 +9,7 @@
 <button>Verificar si acertó con el secreto</button>
 
 <script>
+
     var secreto = Math.round(Math.random() * 10);
     var input = document.querySelector("Input");
     input.focus();
@@ -16,10 +17,12 @@
     function verificar(){
 
         if(parseInt(input.value) == secreto){
+
             alert("Usted acertó");
         }
         
         else{
+            
             alert("Usted erró");
         }
 

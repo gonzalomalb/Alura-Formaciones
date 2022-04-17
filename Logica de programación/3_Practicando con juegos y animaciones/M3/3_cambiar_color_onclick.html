@@ -1,0 +1,50 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");    
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400);
+    color = ["blue", "red", "green"]  //array con los colores
+    colActual = color[0]  //el color que utiliza la función, por defecto es 0
+    var contador = 0;  //contador para cambiar la posición de los items del array(color[0,1,2])
+
+    function dibujarCirculo(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        pincel.fillStyle = colActual;  //color actual
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*3.14);
+        pincel.fill();
+        console.log(x + "," + y);              
+    }
+
+    function alterarColor(evento) {
+        var kl = evento.oncontextmenu;  //variable sin propósito en la función, me ayudo como guia para armar el codigo
+        var bool = true;  //variable con un booleano true, para prevenir que el loop se ejecute infinitamente
+        
+        while(bool){  //el while loop itera los items del array(color[])
+            contador = contador + 1;  //aquí se cambia la posición del array(color[]) al sumarle 1
+            if(contador >= color.length){  //con un if regresamos la variable a su valor original si excede la cantidad de items del array 
+                contador = 0; 
+            }
+
+            colActual = color[contador];  //definimos el color actual con el valor de la variable contador
+            console.log(contador);
+            alert("Funcionó");
+            bool = false; //booleano
+            
+        }
+
+        return false;     
+    }
+
+    pantalla.onclick = dibujarCirculo;
+    pantalla.oncontextmenu = alterarColor;
+
+
+//2 horas para pensar el codigo (facepalm)
+</script>
+
+

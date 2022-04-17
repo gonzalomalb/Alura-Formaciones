@@ -1,27 +1,40 @@
+<meta charset="utf-8">
 <canvas width="600" height="400"> </canvas>
 
 <script>
 
     var pantalla = document.querySelector("canvas");
-    var pincel = pantalla.getContext("2d");
-
-    pincel.fillStyle = "lightgrey";
+    var pincel = pantalla.getContext("2d");    
+    pincel.fillStyle = "grey";
     pincel.fillRect(0,0,600,400);
+    var colores = ["blue", "red", "green"];
+    var coloresEsp = ["azul", "rojo", "verde"];
+    var seleccionarColor = 0;
 
-    pincel.fillStyle = "black";
-    pincel.beginPath();
-    pincel.moveTo(100,25);
-    pincel.lineTo(100,375);
-    pincel.lineTo(450,375);
-    pincel.fill();
 
-    pincel.fillStyle = "white";
-    pincel.beginPath();
-    pincel.moveTo(150,150);
-    pincel.lineTo(150,325);
-    pincel.lineTo(325,325);
-    pincel.fill()
+    function dibujarCirculo(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;    
+        pincel.fillStyle = colores[seleccionarColor];
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*3.14);
+        pincel.fill();
+        console.log(x + "," + y);        
+    }
 
-    
+    pantalla.onclick = dibujarCirculo;
 
-</script>
+    function alterarColor() {
+        if (seleccionarColor < (colores.length - 1)) {
+            seleccionarColor++;
+        } else {
+            seleccionarColor = 0;
+        }
+        alert("Seleccionó el color " + coloresEsp[seleccionarColor]);
+        return false;
+
+    }
+
+    pantalla.oncontextmenu = alterarColor;
+
+</script> 

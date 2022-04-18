@@ -21,14 +21,12 @@
     }
 
     function alterarColor(evento) {       
-        while(evento){ 
-            actual++;  
-            if(actual >= color.length){ 
-                actual = 0; 
-            }
-            alert("Funcionó");
-            return false; 
+        actual++;  
+        if(actual >= color.length){ 
+            actual = 0;
         }     
+        // alert("Funcionó");
+        return false;    
     }
 
     pantalla.onclick = dibujarCirculo;

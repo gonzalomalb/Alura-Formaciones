@@ -1,0 +1,79 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");    
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400);
+
+    function limpiarPantalla(){
+        pincel.clearRect(0,0,600,400);
+        pincel.fillStyle = "grey";
+        pincel.fillRect(0,0,600,400);
+    }
+
+    var radio = 10
+    function disenhoCirculo(x,y,radio,color){
+        pincel.fillStyle = color; 
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2*Math.PI);
+        pincel.fill();
+    }    
+
+    function sortearPosicion(maximo){
+        return Math.floor(Math.random() * maximo);
+    }
+
+    function crearBlanco(x,y){
+        disenhoCirculo(x,y,radio + 20,"red");
+        disenhoCirculo(x,y,radio + 10,"white");
+        disenhoCirculo(x,y,radio,"red");
+    }
+    
+    var xAleatorio;
+    var yAleatorio;
+    var x = 0
+    function dibujarPantalla(){
+        xAleatorio = sortearPosicion(600);
+        yAleatorio = sortearPosicion(400);
+        if(x > 600){
+            x = 0;
+        }
+        limpiarPantalla();
+        crearBlanco(xAleatorio,yAleatorio);
+        x++
+    }
+
+    function disparar(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+
+        if((x < xAleatorio + radio) &&
+           (x > xAleatorio - radio) &&
+           (y < yAleatorio + radio) &&
+           (y > yAleatorio - radio)){
+            alert("Tiro certero");
+        }
+        else if((x < xAleatorio + (radio+10)) &&
+                (x > xAleatorio - (radio+10)) &&
+                (y < yAleatorio + (radio+10)) &&
+                (y > yAleatorio - (radio+10))){
+            alert("Casi en el blanco");
+        }
+        else if((x < xAleatorio + (radio+20)) &&
+                (x > xAleatorio - (radio+20)) &&
+                (y < yAleatorio + (radio+20)) &&
+                (y > yAleatorio - (radio+20))){
+            alert("Fuera de rango");
+        }
+        else{
+            alert("Tiro errado")
+        }  
+    }
+
+    setInterval(dibujarPantalla, 1000);
+
+    pantalla.onclick = disparar
+
+</script>

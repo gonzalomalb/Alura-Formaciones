@@ -5,12 +5,10 @@
     var pantalla = document.querySelector('canvas');
     var pincel = pantalla.getContext('2d');
 
-
     function dibujarCuadrados(x,y,z,v,color){   
         pincel.fillStyle = color;
         pincel.fillRect(x,y,z,v);
     }
-
 
     xRed = 0;
     xGreen = 50;
@@ -24,7 +22,6 @@
         dibujarCuadrados(xBlue,yCuadrado,tamanhoC,tamanhoC,"blue");
     }
 
-
     function limpiarPantalla(){
         pincel.clearRect(0,0,600,400);
         pincel.fillStyle = "grey";
@@ -32,7 +29,6 @@
         dibujarPaletas();
         return false;
     }
-
 
     var puedoDibujar = false;
 
@@ -44,7 +40,6 @@
         puedoDibujar = false;
     }
    
-
     var colores = ["red","green","blue"];
     var color = 2
 
@@ -53,22 +48,17 @@
         var y = evento.pageY - pantalla.offsetTop;
 
         if((y < tamanhoC) && (y >= yCuadrado)){ 
-
             if(x > xRed && x < (xRed + tamanhoC)){
                 color = 0;
-            }
-            else if(x > xGreen && x < (xGreen + tamanhoC)){
+            }else if(x > xGreen && x < (xGreen + tamanhoC)){
                 color = 1;
-            }
-            else if(x > xBlue && x < (xBlue + tamanhoC)){
+            }else if(x > xBlue && x < (xBlue + tamanhoC)){
                 color = 2;
             }
         }
     }
 
-
     function dibujarCirculo(evento) {
-
         if(puedoDibujar){
             var x = evento.pageX - pantalla.offsetLeft;
             var y = evento.pageY - pantalla.offsetTop;
@@ -78,8 +68,7 @@
                (y > yCuadrado) &&
                (y <= tamanhoC + 5)){
 
-            }
-            else{
+            }else{
                 pincel.fillStyle = colores[color];
                 pincel.beginPath();
                 pincel.arc(x, y, 5, 0, 2 * Math.PI);
@@ -87,7 +76,6 @@
             }    
         }
     }
-
 
     limpiarPantalla();
     pantalla.onmousedown = habilitarDibujar;

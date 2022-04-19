@@ -14,24 +14,20 @@
         var ingrediente = prompt("Informe el ingrediente " + contador);
 
         for(var posicion = 0; posicion < ingredientes.length; posicion++){
-
             if(ingrediente == ingredientes[posicion]){
-
                 alert("ingrediente repetido: " + ingrediente);
                 encontrado = true;
                 break;
             }
         }
         if(encontrado == false){
-
             document.write(ingrediente);
             document.write("<br>");
             ingredientes.push(ingrediente);
             contador++
-        }
-        
+        } 
     }
-    
+  
     console.log(ingredientes);
 
 </script>

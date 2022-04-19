@@ -1,10 +1,8 @@
 <meta charset = "UTF-8">
 
-
 <h1>ADIVINA EL NÚMERO</h1>
 <hr>
 <br>
-
 
 <script>
 
@@ -31,21 +29,16 @@
             alert("Bienvenido al sistema " + inicioDeSesionIngresado);
             imprimir("Conectado");
             break;
-        } 
-
-        else{
+        }else{
             if(intentos == 0){
                 imprimir("Intentos agotados, se cerrara el programa.")
                 break;    
-            }
-
-            else{
+            }else{
                 alert("inicio de sesión inválido. Favor intente de nuevo(quedan " + intentos + " intentos");
                 intentos = intentos - 1;
                 continue;
             }
         }
     }
-
 
 </script>

@@ -19,13 +19,9 @@
         br();
     }
     
-
-
     function calculoImc (peso, altura){
         return (peso / (altura * altura));
     }
-
-
 
     nombre = prompt("Ingrese su nombre:")
     pesoPop = prompt("ingrese su peso:");
@@ -33,45 +29,27 @@
 
     imc = calculoImc (pesoPop, alturaPop); 
 
-
-
-
     imprimir(nombre + " su índice de masa corporal: " + imc);
 
     if ( imc < 18){
         imprimir("Por debajo de la linea saludable");
     } 
-
-    if (imc >= 18.50){
-        if (imc < 25){
-            imprimir("Peso saludable");
-        }
+    if ((imc >= 18.50) && (imc < 25)){
+        imprimir("Peso saludable");
     }
-
-    if (imc  >= 25){
-        if (imc < 30){
-            imprimir("Sobrepeso");
-        }
+    if ((imc  >= 25) && (imc < 30)){
+        imprimir("Sobrepeso");
     }
+    if ((imc >= 25) && (imc < 30)){
+        imprimir("Obesidad");
 
-    if (imc >= 25){
-        if (imc < 30){
-            imprimir("Obesidad");
-        }
     }
-
-    if (imc >= 25){
-        if (imc < 30){
-            imprimir("Obesidad");
-        }                
+    if ((imc >= 25) && (imc < 30)){
+        imprimir("Obesidad");     
     }
-
-    if (imc >= 30){
-        if(imc < 110){
-            imprimir("Obesidad Morbida");                
-        }
+    if ((imc >= 30) && (imc < 110)){
+        imprimir("Obesidad Morbida");                
     }
-
     if (imc >= 110){
         imprimir("Usted no debería de existir");
     }

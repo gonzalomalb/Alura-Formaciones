@@ -14,6 +14,7 @@
     }
 
     var radio = 10
+
     function disenhoCirculo(x,y,radio,color){
         pincel.fillStyle = color; 
         pincel.beginPath();
@@ -34,6 +35,7 @@
     var xAleatorio;
     var yAleatorio;
     var x = 0
+
     function dibujarPantalla(){
         xAleatorio = sortearPosicion(600);
         yAleatorio = sortearPosicion(400);
@@ -54,20 +56,17 @@
            (y < yAleatorio + radio) &&
            (y > yAleatorio - radio)){
             alert("Tiro certero");
-        }
-        else if((x < xAleatorio + (radio+10)) &&
+        }else if((x < xAleatorio + (radio+10)) &&
                 (x > xAleatorio - (radio+10)) &&
                 (y < yAleatorio + (radio+10)) &&
                 (y > yAleatorio - (radio+10))){
             alert("Casi en el blanco");
-        }
-        else if((x < xAleatorio + (radio+20)) &&
+        }else if((x < xAleatorio + (radio+20)) &&
                 (x > xAleatorio - (radio+20)) &&
                 (y < yAleatorio + (radio+20)) &&
                 (y > yAleatorio - (radio+20))){
             alert("Fuera de rango");
-        }
-        else{
+        }else{
             alert("Tiro errado")
         }  
     }

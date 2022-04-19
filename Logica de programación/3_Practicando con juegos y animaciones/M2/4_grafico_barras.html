@@ -2,7 +2,8 @@
 
 <script>
 
-    function dibujarRectangulo(x, y, base, altura, color) {
+    function dibujarRectangulo(x, y, base, altura, color){
+
         var pantalla = document.querySelector("canvas");
         var pincel = pantalla.getContext("2d");
 
@@ -12,7 +13,8 @@
         pincel.strokeRect(x,y, base, altura);
     }
 
-    function escribirTexto(x , y, texto) {
+    function escribirTexto(x , y, texto){
+
         var pantalla = document.querySelector("canvas");
         var pincel = pantalla.getContext("2d");
 
@@ -22,9 +24,7 @@
     }
 
     function dibujarBarra(x, y, serie, colores, texto) {
-
         escribirTexto(x, y - 10, texto);
-
         var sumaAltura = 0;
         for (var i = 0; i < serie.length; i++) {
             var altura = serie[i];

@@ -1,10 +1,8 @@
 <meta charset = "UTF-8">
 
-
 <h1>ADIVINA EL NÚMERO</h1>
 <hr>
 <br>
-
 
 <script>
 
@@ -24,24 +22,18 @@
         return(x)
     }
 
-
     var numCorrecto = sort(10);
     var numUsuario = parseInt(prompt("Adivina un número del 1 al 10:"));
 
     if(numUsuario == numCorrecto){
         imprimir("Acertó ! ! !");
         imprimir("El numero era " + numCorrecto);    
-    }
-    else{
+    }else{
         if(numUsuario > numCorrecto){
             imprimir("El número era menor:     " + numCorrecto);
-        }
-        else{
+        }else{
             imprimir("El número era mayor:     " + numCorrecto);
-        }
-        
+        }  
     }
-
-    
 
 </script>

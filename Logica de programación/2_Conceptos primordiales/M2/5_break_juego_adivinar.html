@@ -1,10 +1,8 @@
 <meta charset = "UTF-8">
 
-
 <h1>ADIVINA EL NÚMERO</h1>
 <hr>
 <br>
-
 
 <script>
 
@@ -18,8 +16,6 @@
         document.write("<big>" + frase + "</big>");
         br();
     }
-
-
 
     function sort(n){
         var x = Math.round(Math.random() * n)
@@ -46,24 +42,20 @@
             imprimir("Acertó ! ! !");
             imprimir("El numero era " + numCorrecto + ". Número de intentos: " + intentos);  
             break;
-        } 
-        else{          
+        }else{          
             if(intentos == 3){
                 imprimir("Perdió, el numero era: " + numCorrecto)
                 break;
-            }
-            else{
+            }else{
                 intentos = intentos + 1;
                 if(numUser > numCorrecto){
                     alert("El número es mas chico");
-                }
-                else{
+                }else{
                     alert("El número es mas grande");
                 }
                 continue    
             }   
         }           
     }
-
 
 </script>

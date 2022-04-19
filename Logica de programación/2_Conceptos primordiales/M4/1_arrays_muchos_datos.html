@@ -1,6 +1,5 @@
 <meta charset = "UTF-8">
 
-
 <h1>ADIVINA EL NÚMERO</h1>
 <hr>
 <br>
@@ -20,14 +19,12 @@
         var encontrado = false;
 
         for(posicion = 0; posicion < secreto.length; posicion++){
-
             if(parseInt(input.value) == secreto[posicion]){
             alert("Usted acertó");
             encontrado = true;
             break;
             }
         }
-
         if(encontrado == false){
             
             alert("Usted erró");

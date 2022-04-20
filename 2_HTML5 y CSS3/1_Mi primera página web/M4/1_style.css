@@ -1,0 +1,42 @@
+
+body{
+    
+}
+
+/* El selector de id debe comenzar con # */
+#banner{
+    width: 100%;
+}
+
+.principal{
+    background: #CCCCCC;
+}
+
+h1{
+    text-align: center;
+}
+
+p{  
+    text-align: center;
+}
+
+em strong{
+    color: red;
+}
+
+#mision{ 
+    font-size: 20px;
+}
+
+.diferencia{
+    background: #FFFFFF;
+}
+
+h2{
+    text-align: left;
+}
+
+/* El selector de class debe comenzar con . */
+.items{
+    font-style: italic;
+}

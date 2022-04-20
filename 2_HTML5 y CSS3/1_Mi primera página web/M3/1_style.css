@@ -1,0 +1,15 @@
+/* Utilizamos selectores para definir las propiedades de los marcadores en otro programa*/
+
+body{
+    background: #CCCCCC;
+}
+
+p{  
+    text-align: center;
+    background: #CCCCCC; 
+}
+
+/* Para definir las propiedades de una linea de texto especifica, utilizamos los selectores que marcan dicha linea en cascada */
+em strong{
+    color: red;
+}

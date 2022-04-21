@@ -30,13 +30,25 @@ em strong{
 
 .diferencia{
     background: #FFFFFF;
+    padding: 30px;
 }
 
 h2{
-    text-align: left;
+    text-align: center;
 }
 
 /* El selector de class debe comenzar con . */
 .items{
     font-style: italic;
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imagenDiferencia{
+    width: 50%;
 }

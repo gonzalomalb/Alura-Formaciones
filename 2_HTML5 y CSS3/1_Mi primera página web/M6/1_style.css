@@ -1,0 +1,53 @@
+.titulo-principal{
+    padding-left: 30px;
+}
+
+/* El selector de id debe comenzar con # */
+#banner{
+    width: 100%;
+}
+
+.principal{
+    background: #CCCCCC;
+}
+
+.titulo-centralizado{
+    text-align: center;
+}
+
+p{  
+    text-align: center;
+}
+
+em strong{
+    color: red;
+}
+
+#mision{ 
+    font-size: 20px;
+}
+
+.diferencia{
+    background: #FFFFFF;
+    padding: 30px;
+}
+
+h2{
+    text-align: center;
+}
+
+/* El selector de class debe comenzar con . */
+.items{
+    font-style: italic;
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imagenDiferencia{
+    width: 50%;
+}

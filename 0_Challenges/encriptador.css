@@ -1,0 +1,16 @@
+.body{
+    background-image: url(matrix.jpg);
+    background-size: 100%;
+}
+
+.input{
+    margin: 0px auto;
+    width: 940px;
+    height: 320px;
+    background-image: url(matrix.jpg);
+    background-size: 100%;
+    color: #12ec1d;
+    font-family: Courier New;
+    font-size: 33px;
+    font-weight: 333;
+}

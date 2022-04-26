@@ -6,65 +6,65 @@ var string = "";
 var letras = [];
 var resultado = "";
 
-function encriptar(){
+function encriptar() {
     string = input.value;
-    for(i = 0; i < string.length; i++){
-        if(string[i] == "a"){
+    for (i = 0; i < string.length; i++) {
+        if (string[i] == "a") {
             letras.push("ai");
         }
-        else if(string[i] == "e"){
+        else if (string[i] == "e") {
             letras.push("enter");
         }
-        else if(string[i] == "i"){
+        else if (string[i] == "i") {
             letras.push("imes");
         }
-        else if(string[i] == "o"){
+        else if (string[i] == "o") {
             letras.push("ober");
         }
-        else if(string[i] == "u"){
+        else if (string[i] == "u") {
             letras.push("ufat");
         }
-        else{
+        else {
             letras.push(string[i])
-        }   
+        }
     }
 }
 
-function desencriptar(){
+function desencriptar() {
     string = input.value;
     var i = 0
-    while(i < string.length){
-        if(string[i] == "a"){
+    while (i < string.length) {
+        if (string[i] == "a") {
             letras.push("a");
             i = i + 2;
         }
-        else if(string[i] == "e"){
+        else if (string[i] == "e") {
             letras.push("e");
-            i = i  + 5;
+            i = i + 5;
         }
-        else if(string[i] == "i"){
+        else if (string[i] == "i") {
             letras.push("i");
-            i = i  + 4;
+            i = i + 4;
         }
-        else if(string[i] == "o"){
+        else if (string[i] == "o") {
             letras.push("o");
-            i = i  + 4;
+            i = i + 4;
         }
-        else if(string[i] == "u"){
+        else if (string[i] == "u") {
             letras.push("u");
-            i = i  + 4;
+            i = i + 4;
         }
-        else{
+        else {
             letras.push(string[i]);
             i = i + 1
         }
     }
 }
 
-function generarEncriptado(){
+function generarEncriptado() {
     var i = 0;
     encriptar();
-    while(i < letras.length - 1){
+    while (i < letras.length - 1) {
         resultado = resultado + letras[i];
         i++;
     }
@@ -74,10 +74,10 @@ function generarEncriptado(){
     resultado = "";
 }
 
-function generarDesencriptado(){
+function generarDesencriptado() {
     var i = 0;
     desencriptar();
-    while(i < letras.length - 1){
+    while (i < letras.length - 1) {
         resultado = resultado + letras[i];
         i++;
     }

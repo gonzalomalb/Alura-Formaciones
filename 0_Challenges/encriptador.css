@@ -1,16 +1,64 @@
-.body{
-    background-image: url(matrix.jpg);
-    background-size: 100%;
+body {
+    background-image: url(matrixFondo.jpg);
+    background-size: 100.2%;
+    background-position: top;
 }
 
-.input{
-    margin: 0px auto;
-    width: 940px;
-    height: 320px;
-    background-image: url(matrix.jpg);
-    background-size: 100%;
-    color: #12ec1d;
-    font-family: Courier New;
-    font-size: 33px;
-    font-weight: 333;
+main{
+    text-align: center;
+    margin-top: 250px;
 }
+
+main ul{
+    display: inline-block;  
+}
+
+.interfaz1{
+    padding: 20px;
+}
+
+.interfaz1 li{
+    display: list-item;
+}
+
+.botones{
+    padding: 15px;    
+}
+
+.botones li{
+    display: inline-block;
+}
+
+#input{
+    resize: none;
+    background-image: url(matrix.jpg);
+    background-position: 50% 50%;
+    background-size: 150%;
+    width: 580px;
+    height: 260px;
+    font-family: impact;
+    font-size: 30px;
+    font: 333;
+    color: #FFFFFF;
+   
+}
+
+.interfaz2{
+    padding: 20px;
+}
+
+#output{
+    resize: none;
+    background-image: url(matrix.jpg);
+    background-position: 60% 15%;
+    background-size: 150%;
+    width: 580px;
+    height: 260px;
+    font-family: impact;
+    font-size: 30px;
+    font: 333;
+    color: #FFFFFF;
+}
+
+
+

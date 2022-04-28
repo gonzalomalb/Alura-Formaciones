@@ -1,37 +1,30 @@
 body {
     background-image: url(matrixFondo.jpg);
-    background-size: 100.2%;
-    background-position: top;
+    background-size: 100%;
+}
+
+header{
+    text-align: center;
+    text-decoration: solid underline;
+    font-size: 80px;
+    margin-top: 100px;
+    color: #FFFFFF;
 }
 
 main{
     text-align: center;
-    margin-top: 250px;
+    margin-top: 120px;
 }
 
 main ul{
-    display: inline-block;  
-}
-
-.interfaz1{
-    padding: 20px;
-}
-
-.interfaz1 li{
-    display: list-item;
-}
-
-.botones{
-    padding: 15px;    
-}
-
-.botones li{
     display: inline-block;
+    padding-right: 30px;  
 }
+
 
 #input{
     resize: none;
-    background-image: url(matrix.jpg);
+    background-color: black;
     background-position: 50% 50%;
     background-size: 150%;
     width: 580px;
@@ -40,16 +33,30 @@ main ul{
     font-size: 30px;
     font: 333;
     color: #FFFFFF;
+    border: 5px solid rgb(92, 89, 89);
+    border-radius: 2.5px;
    
 }
 
-.interfaz2{
-    padding: 20px;
+.botones-ed li{
+    display: inline-block;
+    position: relative;
+    margin: 20px 10px;
+}
+
+.botones-ed li button{
+    width: 160px;
+    height: 40px;
+    font-size: 22px;
+    background-color: rgb(92, 89, 89);
+    color: #FFFFFF;
+    font-family: impact;
+    box-sizing: border-box;
 }
 
 #output{
     resize: none;
-    background-image: url(matrix.jpg);
+    background-color: black;
     background-position: 60% 15%;
     background-size: 150%;
     width: 580px;
@@ -58,7 +65,26 @@ main ul{
     font-size: 30px;
     font: 333;
     color: #FFFFFF;
+    border: 5px solid rgb(92, 89, 89);
+    border-radius: 2.5px;
 }
 
+.boton-copy{
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 22px;
+    background-color: rgb(92, 89, 89);
+    color: #FFFFFF;
+    font-family: impact;
+}
+
+.texto-pie{
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+    font-size: 15px;
+}
 
 

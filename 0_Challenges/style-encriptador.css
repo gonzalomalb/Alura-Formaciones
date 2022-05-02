@@ -29,10 +29,10 @@ main ul{
     background-size: 150%;
     width: 580px;
     height: 260px;
-    font-family: impact;
+    font-family: 'Syne Mono', monospace;
     font-size: 30px;
     font: 333;
-    color: #FFFFFF;
+    color: #2be206;
     border: 5px solid rgb(92, 89, 89);
     border-radius: 2.5px;
    
@@ -61,10 +61,10 @@ main ul{
     background-size: 150%;
     width: 580px;
     height: 260px;
-    font-family: impact;
+    font-family: 'Syne Mono', monospace;
     font-size: 30px;
     font: 333;
-    color: #FFFFFF;
+    color: #2be206;
     border: 5px solid rgb(92, 89, 89);
     border-radius: 2.5px;
 }

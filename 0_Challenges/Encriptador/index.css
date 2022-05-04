@@ -48,7 +48,7 @@ main section{
     font-size: 20px;
     background-color: rgb(92, 89, 89);
     color: #FFFFFF;
-    font-family: 'Roboto Mono', monospace;
+    font-family: impact;
     box-sizing: border-box;
     display: inline-block;
     position: relative;
@@ -86,7 +86,7 @@ main section{
     font-size: 20px;
     background-color: rgb(92, 89, 89);
     color: #FFFFFF;
-    font-family: 'Roboto Mono', monospace;;
+    font-family: impact;
     display: inline-block;
     position: relative;
     margin: 20px 10px;

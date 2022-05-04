@@ -3,17 +3,15 @@
 <html lang="es">
 
     <head>
-
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
         <title>[---[Encriptador]---]</title>
-        </title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style-encriptador.css">
         <link rel="" href="logica.js">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
-
     </head>
 
     <body>
@@ -23,25 +21,24 @@
         </header>
 
         <main>
-            <ul class="interfaz-1">
-                <li><textarea id="input" placeholder="Escriba el texto que desea encryptar o desencryptar. Solo minúsculas, sin acento."></textarea></li>
-                <li>
-                    <ul class="botones-ed">
-                        <li><button>Encryptar</button></li>
-                        <li><button>Desencryptar</button></li>
-                    </ul>
-                </li>                  
+            <ul class="interfaz1">
+                <id><textarea id="input" placeholder="Escriba el texto que desea encryptar o desencryptar. Solo minúsculas, sin acento."></textarea></id>
+                <id>
+                    <section class="botones-ed">
+                        <button id="botonEncriptar">Encryptar</button>
+                        <button id="botonDesencriptar">Desencryptar</button>
+                    </section>
+                </id>
             </ul>
-            <ul class="interfaz-2">
+            <ul class="interfaz2">
                 <li><textarea readonly id="output">readonly ON</textarea></li>
-                <li><button class="boton-copy">Copy</button></li>                  
+                <li><button class="boton-copiar">Copy</button></li>                          
             </ul>
         </main>
 
         <footer>
             <p class="texto-pie">Gonzalo Matias Albornoz - &copy Copyright - 2022</p>
         </footer>
-
+        
     </body>
-
 </html>

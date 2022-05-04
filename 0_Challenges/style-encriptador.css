@@ -1,9 +1,9 @@
 body {
     background-image: url(matrixFondo.jpg);
-    background-size: 100%;
+    background-size: cover 600%;
 }
 
-header{
+h1{
     text-align: center;
     text-decoration: solid underline;
     font-size: 80px;
@@ -18,9 +18,13 @@ main{
 
 main ul{
     display: inline-block;
-    padding-right: 30px;  
+    text-align: center;
+    padding-inline: 20px;
 }
 
+.interfaz1 li{
+    display: block;
+}
 
 #input{
     resize: none;
@@ -38,13 +42,7 @@ main ul{
    
 }
 
-.botones-ed li{
-    display: inline-block;
-    position: relative;
-    margin: 20px 10px;
-}
-
-.botones-ed li button{
+.botones-ed button{
     width: 160px;
     height: 40px;
     font-size: 22px;
@@ -52,6 +50,16 @@ main ul{
     color: #FFFFFF;
     font-family: impact;
     box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    margin: 20px 10px;
+}
+.botones-ed button:active{
+    background-color: rgb(56, 54, 54)
+}
+
+.interfaz2 li{
+    display: block;
 }
 
 #output{
@@ -69,7 +77,7 @@ main ul{
     border-radius: 2.5px;
 }
 
-.boton-copy{
+.boton-copiar{
     width: 100px;
     height: 40px;
     margin-top: 20px;
@@ -77,6 +85,9 @@ main ul{
     background-color: rgb(92, 89, 89);
     color: #FFFFFF;
     font-family: impact;
+}
+.boton-copiar:active{
+    background-color: rgb(56, 54, 54)
 }
 
 .texto-pie{
@@ -87,4 +98,15 @@ main ul{
     font-size: 15px;
 }
 
+@media screen and (max-width: 480px) {
+    body, main ul{
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        margin: 0 auto;
+    }
 
+    .texto-pie{
+        text-align: end center;
+    }
+}

@@ -1,3 +1,6 @@
+
+/* CSS para el style de index*/
+
 body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -37,50 +40,10 @@ nav a:hover{
     text-decoration: underline;
 }
 
-.productos{
-    width: 940px;
-    margin: 0 auto;
-    padding: 50px;
 
-}
-.productos li{
-    display: inline-block;
-    text-align: center;
-    width: 30%;
-    vertical-align: top;
-    margin: 0 1.5%;
-    padding: 30px 20px;
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: 10px;
-}
 
-.productos li:hover{
-    border-color: #c78c19;
-}
 
-.productos li:hover h2{
-    font-size: 33px;
-}
-
-.productos li:active{
-    border-color: #088c19;
-}
- 
-.productos h2{
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.producto-descripcion{
-    font-size: 18px;
-}
-
-.producto-precio{
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-}
+/* CSS para el style del footer*/
 
 footer{
     text-align: center;
@@ -94,66 +57,10 @@ footer{
     margin: 20px;
 }
 
-form{
-    margin: 40px 0
-}
-
-form label, form legend{
-    display: block;
-    font-size: 20px;
-    margin: 0 0 10px;
-}
-
-.input-padron{
-    display: block;
-    margin: 0 0 20px;
-    padding: 10px 25px; 
-    width: 50%;
-}
-
-.checkbox{
-    margin: 20px 0;
-}
-
-.enviar{
-    width: 40%;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    background: orange;
-    border: none;
-    border-radius: 5px;
-    transition: 1s all;
-    cursor: pointer;
-    
-}
-
-.enviar:hover{
-    background: darkorange;
-    transform: scale(1.2) rotate(1deg);
-}
-
-table{
-    margin: 40px 40px;
-}
-
-thead{
-    background: #555555;
-    color: white;
-    font-weight: bold;
-}
-
-td,th{
-    border: 1px solid #000000;
-    padding: 8px 15px;
-}
 
 
 
-/* CSS para el style de index*/
-
-
+/* CSS para el style de Home*/
 
 .banner{
     width: 100%;
@@ -248,6 +155,119 @@ td,th{
     width: 560px;
     margin: 1em auto;
 }
+
+
+
+
+/* CSS para el style de Productos*/
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color: #c78c19;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.productos li:active{
+    border-color: #088c19;
+}
+ 
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+
+/* CSS para el style de Contacto*/
+
+form{
+    margin: 40px 0
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px; 
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer; 
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2) rotate(1deg);
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td,th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+
+
+
+/* CSS para hacer el codigo responsive*/
 
 @media screen and (max-width: 480px) {
     h1{

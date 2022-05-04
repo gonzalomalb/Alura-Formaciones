@@ -1,6 +1,11 @@
-var button = document.querySelector("button");
-var input = document.querySelector("input");
-input.focus();
+
+
+var botonEncriptar = document.querySelector("botonEncriptar");
+var botonDesencriptar = document.querySelector("botonDesencriptar");
+var botonCopiar = document.querySelector("boton-copiar");
+var windowInput = document.querySelector("input");
+var windowOutput = document.querySelector("output");
+windowInput.focus();
 
 var string = "";
 var letras = [];
@@ -88,5 +93,5 @@ function generarDesencriptado() {
     return false
 }
 
-button.onclick = generarEncriptado;
-button.oncontextmenu = generarDesencriptado;
+button.onclick(botonEncriptar) = generarEncriptado;
+button.onclick(botonDesencriptar) = generarDesencriptado;

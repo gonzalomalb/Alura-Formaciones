@@ -5,10 +5,11 @@ body {
 
 h1{
     text-align: center;
-    text-decoration: solid underline;
+    font-family: 'Syne Mono', monospace;
     font-size: 80px;
+    text-decoration: solid underline;
     margin-top: 100px;
-    color: white;
+    color: rgb(157, 214, 145);
 }
 
 main{
@@ -16,17 +17,13 @@ main{
     margin-top: 120px;
 }
 
-main ul{
+main section{
     display: inline-block;
     text-align: center;
-    padding-inline: 20px;
+    padding-inline: 30px;
 }
 
-.interfaz1 li{
-    display: block;
-}
-
-#input{
+.input{
     resize: none;
     background-color: black;
     background-position: 50% 50%;
@@ -39,13 +36,14 @@ main ul{
     color: #2be206;
     border: 5px solid rgb(92, 89, 89);
     border-radius: 2.5px;
+    box-shadow: -10px -10px 15px 5px black;
    
 }
 
-.botones-ed button{
+.botonera-ed button{
     width: 160px;
     height: 40px;
-    font-size: 22px;
+    font-size: 20px;
     background-color: rgb(92, 89, 89);
     color: #FFFFFF;
     font-family: impact;
@@ -53,16 +51,17 @@ main ul{
     display: inline-block;
     position: relative;
     margin: 20px 10px;
+    box-shadow: -5px -5px 10px 2px black;
+    transition: 500ms;
 }
-.botones-ed button:active{
-    background-color: rgb(56, 54, 54)
+.botonera-ed button:hover{
+    background-color: rgb(56, 54, 54);
+}
+.botonera-ed button:active{
+    transform: scale(0.8);
 }
 
-.interfaz2 li{
-    display: block;
-}
-
-#output{
+.output{
     resize: none;
     background-color: black;
     background-position: 60% 15%;
@@ -75,19 +74,28 @@ main ul{
     color: #2be206;
     border: 5px solid rgb(92, 89, 89);
     border-radius: 2.5px;
+    box-shadow: 10px -10px 15px 5px black;
 }
 
-.boton-copiar{
+.botonera-cb button{
     width: 100px;
     height: 40px;
     margin-top: 20px;
-    font-size: 22px;
+    font-size: 20px;
     background-color: rgb(92, 89, 89);
     color: #FFFFFF;
     font-family: impact;
+    display: inline-block;
+    position: relative;
+    margin: 20px 10px;
+    box-shadow: 5px -5px 10px 2px black;
+    transition: 500ms;
 }
-.boton-copiar:active{
-    background-color: rgb(56, 54, 54)
+.botonera-cb button:hover{
+    background-color: rgb(56, 54, 54);
+}
+.botonera-cb button:active{
+    transform: scale(0.8);
 }
 
 .texto-pie{
@@ -99,7 +107,7 @@ main ul{
 }
 
 @media screen and (max-width: 480px) {
-    body, main ul{
+    body, main section{
         display: inline-block;
         width: auto;
         text-align: center;

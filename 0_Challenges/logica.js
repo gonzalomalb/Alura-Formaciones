@@ -1,19 +1,16 @@
 
 
-var botonEncriptar = document.querySelector("botonEncriptar");
-var botonDesencriptar = document.querySelector("botonDesencriptar");
-var botonCopiar = document.querySelector("boton-copiar");
-var windowInput = document.querySelector("input");
-var windowOutput = document.querySelector("output");
+const windowInput = document.querySelector(".input");
+const windowOutput = document.querySelector(".output");
 windowInput.focus();
 
-var string = "";
-var letras = [];
-var resultado = "";
+let string = "";
+let letras = [];
+let resultado = "";
 
 function encriptar() {
-    string = input.value;
-    for (i = 0; i < string.length; i++) {
+    string = windowInput.value;
+    for (i = 0; i < string.length + 1; i++) {
         if (string[i] == "a") {
             letras.push("ai");
         }
@@ -36,9 +33,9 @@ function encriptar() {
 }
 
 function desencriptar() {
-    string = input.value;
-    var i = 0
-    while (i < string.length) {
+    string = windowInput.value;
+    let i = 0
+    while (i < string.length + 1) {
         if (string[i] == "a") {
             letras.push("a");
             i = i + 2;
@@ -67,31 +64,39 @@ function desencriptar() {
 }
 
 function generarEncriptado() {
-    var i = 0;
+    let i = 0;
     encriptar();
     while (i < letras.length - 1) {
         resultado = resultado + letras[i];
         i++;
     }
-    alert(resultado);
+    windowOutput.value = resultado;
     string = "";
     letras = [];
     resultado = "";
 }
 
 function generarDesencriptado() {
-    var i = 0;
+    let i = 0;
     desencriptar();
     while (i < letras.length - 1) {
         resultado = resultado + letras[i];
         i++;
     }
-    alert(resultado);
+    windowOutput.value = resultado;
     string = "";
     letras = [];
     resultado = "";
     return false
 }
 
-button.onclick(botonEncriptar) = generarEncriptado;
-button.onclick(botonDesencriptar) = generarDesencriptado;
+function copiar(){
+    let copiarTexto = windowOutput;
+    copiarTexto.select();
+    document.execCommand("copy");
+}
+
+function borrar(){
+    windowInput.value = "";
+    windowOutput.value = "";
+}

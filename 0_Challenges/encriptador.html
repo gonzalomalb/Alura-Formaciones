@@ -8,7 +8,6 @@
         <title>[---[Encriptador]---]</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style-encriptador.css">
-        <link rel="" href="logica.js">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
@@ -21,19 +20,21 @@
         </header>
 
         <main>
-            <ul class="interfaz1">
-                <id><textarea id="input" placeholder="Escriba el texto que desea encryptar o desencryptar. Solo minúsculas, sin acento."></textarea></id>
-                <id>
-                    <section class="botones-ed">
-                        <button id="botonEncriptar">Encryptar</button>
-                        <button id="botonDesencriptar">Desencryptar</button>
-                    </section>
-                </id>
-            </ul>
-            <ul class="interfaz2">
-                <li><textarea readonly id="output">readonly ON</textarea></li>
-                <li><button class="boton-copiar">Copy</button></li>                          
-            </ul>
+            <section class="interfaz1">
+                <textarea class="input" placeholder="Escriba el texto que desea encryptar o desencryptar. Solo minúsculas, sin acento."></textarea>
+                <div class="botonera-ed">
+                    <button id="botonEncriptar" onclick="generarEncriptado()">Encryptar</button>
+                    <button id="botonDesencriptar" onclick="generarDesencriptado()">Desencryptar</button>
+                </div> 
+            </section>
+
+            <section class="interfaz2">
+                <textarea readonly class="output"></textarea>
+                <div class="botonera-cb">
+                    <button id="boton-copiar" onclick="copiar()">Copiar</button>
+                    <button id="boton-borrar" onclick="borrar()">Borrar</button>
+                </div>                          
+            </section>
         </main>
 
         <footer>
@@ -41,4 +42,6 @@
         </footer>
         
     </body>
+    
+    <script src="logica.js"></script>
 </html>
